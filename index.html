@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tembak 2048 - Privacy Policy</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FFF9F2;
+      --border-dark: #2A2F35;
+      --purple-main: #6C5CE7;
+      --purple-dark: #5140C9;
+      --yellow-sun: #FFD32A;
+      --yellow-shade: #E1B100;
+      --pink-candy: #FF7675;
+      --blue-sky: #00CEC9;
+      --green-lime: #2ED573;
+      --green-dark: #20A556;
+      --cube-orange: #FF9F43;
+      --card-bg: #FFFFFF;
+      --text-main: #2D3436;
+      --text-muted: #636E72;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Fredoka', 'Nunito', sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 211, 42, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 90% 15%, rgba(108, 92, 231, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(0, 206, 201, 0.12) 0%, transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(255, 118, 117, 0.12) 0%, transparent 20%);
+    }
+
+    /* Floating 2048 Cubes in Background */
+    .bg-cube {
+      position: fixed;
+      border: 3px solid var(--border-dark);
+      border-radius: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 0 var(--border-dark);
+      z-index: -1;
+      opacity: 0.35;
+      user-select: none;
+      animation: floatSlow 8s ease-in-out infinite alternate;
+    }
+
+    .bg-cube-1 {
+      top: 80px;
+      left: 30px;
+      width: 58px;
+      height: 58px;
+      background: #FED330;
+      font-size: 20px;
+      transform: rotate(-12deg);
+      animation-delay: 0s;
+    }
+
+    .bg-cube-2 {
+      top: 240px;
+      right: 35px;
+      width: 68px;
+      height: 68px;
+      background: #FD79A8;
+      font-size: 24px;
+      color: #fff;
+      transform: rotate(15deg);
+      animation-delay: 1.5s;
+    }
+
+    .bg-cube-3 {
+      bottom: 120px;
+      left: 45px;
+      width: 64px;
+      height: 64px;
+      background: #00CEC9;
+      font-size: 22px;
+      transform: rotate(-8deg);
+      animation-delay: 2.8s;
+    }
+
+    .bg-cube-4 {
+      bottom: 250px;
+      right: 50px;
+      width: 76px;
+      height: 76px;
+      background: #6C5CE7;
+      color: #fff;
+      font-size: 26px;
+      transform: rotate(10deg);
+      animation-delay: 0.8s;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) rotate(-6deg); }
+      100% { transform: translateY(-24px) rotate(8deg); }
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    /* Top Language Switcher Bar */
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 3px solid var(--border-dark);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 4px 0 var(--border-dark);
+    }
+
+    .lang-switcher-wrapper {
+      display: inline-flex;
+      background: #FFFFFF;
+      border: 3px solid var(--border-dark);
+      border-radius: 999px;
+      padding: 4px;
+      box-shadow: 0 4px 0 var(--border-dark);
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 8px 16px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .lang-btn.active {
+      background: var(--purple-main);
+      color: #FFFFFF;
+      box-shadow: 0 3px 0 var(--border-dark);
+      transform: translateY(-2px);
+    }
+
+    .lang-btn:hover:not(.active) {
+      background: #F1F2F6;
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: #FFFFFF;
+      border: 4px solid var(--border-dark);
+      border-radius: 32px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 10px 0 var(--border-dark);
+      position: relative;
+      margin-bottom: 32px;
+      background-image: radial-gradient(#F0EFFF 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+    }
+
+    .app-icon-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .app-icon {
+      width: 112px;
+      height: 112px;
+      border-radius: 28px;
+      border: 4px solid var(--border-dark);
+      box-shadow: 0 8px 0 var(--border-dark);
+      display: block;
+      margin: 0 auto;
+      background: #FED330;
+      object-fit: cover;
+      animation: popBounce 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes popBounce {
+      0% { transform: scale(0.7) rotate(-8deg); }
+      70% { transform: scale(1.08) rotate(4deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+
+    .badge-star {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--yellow-sun);
+      border: 3px solid var(--border-dark);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 3px 0 var(--border-dark);
+      transform: rotate(15deg);
+    }
+
+    .hero-title {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--purple-main);
+      margin-bottom: 20px;
+    }
+
+    .hero-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .meta-pill {
+      background: #F8F9FA;
+      border: 2px solid var(--border-dark);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: 0 3px 0 var(--border-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-pill.yellow {
+      background: #FFF9DB;
+    }
+
+    .meta-pill.green {
+      background: #E6FCF5;
+      color: #0CA678;
+    }
+
+    /* Content Cards */
+    .policy-section {
+      background: var(--card-bg);
+      border: 3px solid var(--border-dark);
+      border-radius: 24px;
+      padding: 26px 28px;
+      margin-bottom: 22px;
+      box-shadow: 0 6px 0 var(--border-dark);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .policy-section:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 0 var(--border-dark);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .section-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 3px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 0 var(--border-dark);
+      flex-shrink: 0;
+    }
+
+    .icon-purple { background: #EAE6FF; }
+    .icon-yellow { background: #FFF4CC; }
+    .icon-teal   { background: #D6FFF8; }
+    .icon-pink   { background: #FFE0E0; }
+    .icon-blue   { background: #DDF3FF; }
+    .icon-green  { background: #DBF9E8; }
+
+    .section-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .policy-section p {
+      font-size: 16px;
+      font-weight: 500;
+      color: #4A4E51;
+      margin-bottom: 12px;
+      line-height: 1.65;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cartoon-highlight-box {
+      background: #F8F7FF;
+      border: 2px dashed var(--purple-main);
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin: 14px 0;
+    }
+
+    .cartoon-highlight-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .cartoon-highlight-box li {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .cartoon-highlight-box li:last-child {
+      margin-bottom: 0;
+    }
+
+    .check-emoji {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: linear-gradient(135deg, #6C5CE7, #8E44AD);
+      color: #FFFFFF;
+      border: 4px solid var(--border-dark);
+      border-radius: 28px;
+      padding: 32px 28px;
+      box-shadow: 0 8px 0 var(--border-dark);
+      text-align: center;
+      margin-top: 36px;
+    }
+
+    .contact-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+
+    .email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--yellow-sun);
+      color: var(--text-main);
+      border: 3px solid var(--border-dark);
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-family: inherit;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 5px 0 var(--border-dark);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .email-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 0 var(--border-dark);
+      background: #FFE055;
+    }
+
+    .email-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 var(--border-dark);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .footer-pill {
+      display: inline-block;
+      margin-top: 8px;
+      background: #FFFFFF;
+      border: 2px solid var(--border-dark);
+      padding: 4px 12px;
+      border-radius: 999px;
+      box-shadow: 0 3px 0 var(--border-dark);
+      font-size: 13px;
+    }
+
+    /* Notification Toast for Copying */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #2D3436;
+      color: #FFFFFF;
+      border: 2px solid #FFFFFF;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 9999;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 14px 60px;
+      }
+      .hero-card {
+        padding: 26px 18px;
+      }
+      .hero-title {
+        font-size: 26px;
+      }
+      .policy-section {
+        padding: 20px 18px;
+      }
+      .section-title {
+        font-size: 18px;
+      }
+      .bg-cube {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animated Cartoon 2048 Cubes -->
+  <div class="bg-cube bg-cube-1">2048</div>
+  <div class="bg-cube bg-cube-2">1024</div>
+  <div class="bg-cube bg-cube-3">512</div>
+  <div class="bg-cube bg-cube-4">256</div>
+
+  <div class="container">
+    
+    <!-- Navigation / Language Switcher -->
+    <header class="nav-bar">
+      <div class="brand-tag">
+        <span>🎮</span>
+        <span id="txt-official-doc">Dokumen Kebijakan Resmi</span>
+      </div>
+
+      <div class="lang-switcher-wrapper" role="radiogroup" aria-label="Language Selector">
+        <button class="lang-btn" id="btn-lang-en" onclick="setLanguage('en')">
+          <span>🇬🇧</span> English
+        </button>
+        <button class="lang-btn active" id="btn-lang-id" onclick="setLanguage('id')">
+          <span>🇮🇩</span> Indonesia
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Header -->
+    <section class="hero-card">
+      <div class="app-icon-wrapper">
+        <img src="icon.png" alt="Tembak 2048 App Icon" class="app-icon" onerror="this.src='https://via.placeholder.com/128/FFD32A/2A2F35?text=2048'">
+        <div class="badge-star">✨</div>
+      </div>
+
+      <h1 class="hero-title" id="txt-hero-title">Kebijakan Privasi Tembak 2048</h1>
+      <p class="hero-subtitle" id="txt-hero-sub">Tembak 2048: 3D Chain Cube Puzzle</p>
+
+      <div class="hero-meta-pills">
+        <div class="meta-pill yellow">
+          <span>🏢</span>
+          <span id="txt-meta-org">Rona Pratama Citra Abadi</span>
+        </div>
+        <div class="meta-pill">
+          <span>📦</span>
+          <span>com.ronapratama.tembak2048</span>
+        </div>
+        <div class="meta-pill green">
+          <span>🛡️</span>
+          <span id="txt-meta-status">100% Ramah Privasi & Keluarga</span>
+        </div>
+        <div class="meta-pill">
+          <span>📅</span>
+          <span id="txt-meta-updated">Terakhir Diperbarui: 8 Oktober 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <main id="policy-content">
+
+      <!-- Section 1: Ringkasan & Komitmen -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-purple">🌟</div>
+          <h2 class="section-title" id="s1-title">1. Komitmen Privasi Kami</h2>
+        </div>
+        <p id="s1-p1">
+          Selamat datang di game <strong>Tembak 2048</strong>! Game ini dikembangkan dan dikelola oleh <strong>Rona Pratama Citra Abadi</strong>. Kami sangat menghargai privasi para pemain kami dan berkomitmen penuh untuk melindungi informasi Anda selama memainkan game santai ini.
+        </p>
+        <p id="s1-p2">
+          Kebijakan Privasi ini menjelaskan jenis data apa yang diproses (atau tidak diproses) saat Anda mengunduh, memasang, dan memainkan Tembak 2048 di perangkat Android Anda.
+        </p>
+      </article>
+
+      <!-- Section 2: Data Pribadi -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-yellow">🎯</div>
+          <h2 class="section-title" id="s2-title">2. Pengumpulan dan Penggunaan Data</h2>
+        </div>
+        <p id="s2-p1">
+          <strong>Kami TIDAK mengumpulkan informasi pribadi yang dapat mengidentifikasi Anda</strong> (seperti nama asli, nomor telepon, alamat rumah, informasi rekening bank, maupun data lokasi GPS).
+        </p>
+        <div class="cartoon-highlight-box">
+          <ul id="s2-list">
+            <li><span class="check-emoji">✅</span> <strong>Skor dan Level:</strong> Disimpan secara lokal di memori perangkat Anda (Local Storage) untuk menyimpan capaian rekor balok 2048.</li>
+            <li><span class="check-emoji">✅</span> <strong>Preferensi Pengguna:</strong> Pilihan suara/efek audio dan preferensi bahasa (Inggris/Indonesia) disimpan langsung di HP Anda.</li>
+            <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Pendaftaran:</strong> Anda dapat langsung memainkan game tanpa harus membuat akun atau login.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Section 3: Izin Perangkat -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-teal">📱</div>
+          <h2 class="section-title" id="s3-title">3. Izin Akses Perangkat (Permissions)</h2>
+        </div>
+        <p id="s3-p1">
+          Aplikasi Tembak 2048 hanya memerlukan izin dasar standar Android untuk pengoperasian game yang lancar:
+        </p>
+        <div class="cartoon-highlight-box">
+          <ul id="s3-list">
+            <li><span class="check-emoji">🔔</span> <strong>Notifikasi (POST_NOTIFICATIONS):</strong> Digunakan untuk memberikan pengingat bermain atau informasi hadiah harian santai secara lokal.</li>
+            <li><span class="check-emoji">⏰</span> <strong>Alarm / Pengingat (SCHEDULE_EXACT_ALARM):</strong> Digunakan oleh sistem penjadwalan lokal game untuk fitur pengingat di perangkat Anda.</li>
+            <li><span class="check-emoji">🌐</span> <strong>Konektivitas Jaringan Dasar (INTERNET & ACCESS_NETWORK_STATE):</strong> Digunakan untuk koneksi dasar engine game.</li>
+          </ul>
+        </div>
+        <p id="s3-p2">
+          Anda dapat menonaktifkan izin notifikasi kapan saja melalui menu Pengaturan Aplikasi di ponsel Anda tanpa mengurangi keseruan bermain game.
+        </p>
+      </article>
+
+      <!-- Section 4: Layanan Pihak Ketiga -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-pink">🧩</div>
+          <h2 class="section-title" id="s4-title">4. Layanan Pihak Ketiga & Engine</h2>
+        </div>
+        <p id="s4-p1">
+          Game ini dibangun menggunakan framework <strong>Unity Technologies</strong>. Unity dapat memproses data teknis non-pribadi perangkat standar (seperti model ponsel, versi OS, resolusi layar) semata-mata untuk tujuan optimalisasi grafis 3D dan stabilitas performa game.
+        </p>
+        <p id="s4-p2">
+          Untuk mempelajari kebijakan penanganan data Unity, Anda dapat mengunjungi <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: var(--purple-main); font-weight: 700; text-decoration: underline;">Kebijakan Privasi Unity</a>.
+        </p>
+      </article>
+
+      <!-- Section 5: Privasi Anak-Anak -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-blue">🧸</div>
+          <h2 class="section-title" id="s5-title">5. Perlindungan Privasi Anak (COPPA)</h2>
+        </div>
+        <p id="s5-p1">
+          Game Tembak 2048 ramah untuk semua usia, termasuk keluarga dan anak-anak. Kami tidak pernah secara sadar mengumpulkan data pengenal pribadi apa pun dari anak-anak di bawah umur (di bawah 13 tahun) sesuai dengan undang-undang Children's Online Privacy Protection Act (COPPA).
+        </p>
+      </article>
+
+      <!-- Section 6: Keamanan Data & Hak Pengguna -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-green">🔐</div>
+          <h2 class="section-title" id="s6-title">6. Keamanan Data & Hak Anda</h2>
+        </div>
+        <p id="s6-p1">
+          Karena semua data skor disimpan secara lokal di ponsel Anda, Anda memiliki kendali penuh 100%. Jika Anda ingin menghapus seluruh data skor dan riwayat permainan, Anda cukup melakukan <em>Clear Data (Hapus Data)</em> pada menu info aplikasi Tembak 2048 di pengaturan HP, atau menghapus instalasi (uninstall) game.
+        </p>
+      </article>
+
+      <!-- Section 7: Perubahan Kebijakan -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-purple">🔄</div>
+          <h2 class="section-title" id="s7-title">7. Perubahan Kebijakan Privasi</h2>
+        </div>
+        <p id="s7-p1">
+          Kami dapat memperbarui dokumen Kebijakan Privasi ini dari waktu ke waktu jika terdapat pembaruan fitur pada aplikasi. Segala perubahan akan langsung diperbarui pada halaman ini beserta tanggal revisi terbaru.
+        </p>
+      </article>
+
+    </main>
+
+    <!-- Contact Section -->
+    <section class="contact-card">
+      <h3 id="txt-contact-title">Pertanyaan atau Masukan? Hubungi Kami!</h3>
+      <p id="txt-contact-desc">
+        Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau game Tembak 2048, tim kami di <strong>Rona Pratama Citra Abadi</strong> siap membantu Anda.
+      </p>
+      <button class="email-btn" onclick="copyEmail()">
+        <span>✉️</span>
+        <span id="txt-contact-email">ronapratama95@gmail.com</span>
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 <strong>Rona Pratama Citra Abadi</strong>. Hak Cipta Dilindungi.</p>
+      <div class="footer-pill">
+        <span>Tembak 2048 • Single Page Privacy Policy</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <div class="toast" id="toast">Email berhasil disalin ke clipboard! 📋</div>
+
+  <script>
+    const translations = {
+      id: {
+        officialDoc: "Dokumen Kebijakan Resmi",
+        heroTitle: "Kebijakan Privasi Tembak 2048",
+        heroSub: "Tembak 2048: 3D Chain Cube Puzzle",
+        metaOrg: "Rona Pratama Citra Abadi",
+        metaStatus: "100% Ramah Privasi & Keluarga",
+        metaUpdated: "Terakhir Diperbarui: 8 Oktober 2026",
+
+        s1Title: "1. Komitmen Privasi Kami",
+        s1P1: "Selamat datang di game <strong>Tembak 2048</strong>! Game ini dikembangkan dan dikelola oleh <strong>Rona Pratama Citra Abadi</strong>. Kami sangat menghargai privasi para pemain kami dan berkomitmen penuh untuk melindungi informasi Anda selama memainkan game santai ini.",
+        s1P2: "Kebijakan Privasi ini menjelaskan jenis data apa yang diproses (atau tidak diproses) saat Anda mengunduh, memasang, dan memainkan Tembak 2048 di perangkat Android Anda.",
+
+        s2Title: "2. Pengumpulan dan Penggunaan Data",
+        s2P1: "<strong>Kami TIDAK mengumpulkan informasi pribadi yang dapat mengidentifikasi Anda</strong> (seperti nama asli, nomor telepon, alamat rumah, informasi rekening bank, maupun data lokasi GPS).",
+        s2List: `
+          <li><span class="check-emoji">✅</span> <strong>Skor dan Level:</strong> Disimpan secara lokal di memori perangkat Anda (Local Storage) untuk menyimpan capaian rekor balok 2048.</li>
+          <li><span class="check-emoji">✅</span> <strong>Preferensi Pengguna:</strong> Pilihan suara/efek audio dan preferensi bahasa (Inggris/Indonesia) disimpan langsung di HP Anda.</li>
+          <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Pendaftaran:</strong> Anda dapat langsung memainkan game tanpa harus membuat akun atau login.</li>
+        `,
+
+        s3Title: "3. Izin Akses Perangkat (Permissions)",
+        s3P1: "Aplikasi Tembak 2048 hanya memerlukan izin dasar standar Android untuk pengoperasian game yang lancar:",
+        s3List: `
+          <li><span class="check-emoji">🔔</span> <strong>Notifikasi (POST_NOTIFICATIONS):</strong> Digunakan untuk memberikan pengingat bermain atau informasi hadiah harian santai secara lokal.</li>
+          <li><span class="check-emoji">⏰</span> <strong>Alarm / Pengingat (SCHEDULE_EXACT_ALARM):</strong> Digunakan oleh sistem penjadwalan lokal game untuk fitur pengingat di perangkat Anda.</li>
+          <li><span class="check-emoji">🌐</span> <strong>Konektivitas Jaringan Dasar (INTERNET & ACCESS_NETWORK_STATE):</strong> Digunakan untuk koneksi dasar engine game.</li>
+        `,
+        s3P2: "Anda dapat menonaktifkan izin notifikasi kapan saja melalui menu Pengaturan Aplikasi di ponsel Anda tanpa mengurangi keseruan bermain game.",
+
+        s4Title: "4. Layanan Pihak Ketiga & Engine",
+        s4P1: "Game ini dibangun menggunakan framework <strong>Unity Technologies</strong>. Unity dapat memproses data teknis non-pribadi perangkat standar (seperti model ponsel, versi OS, resolusi layar) semata-mata untuk tujuan optimalisasi grafis 3D dan stabilitas performa game.",
+        s4P2: "Untuk mempelajari kebijakan penanganan data Unity, Anda dapat mengunjungi <a href='https://unity.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer' style='color: var(--purple-main); font-weight: 700; text-decoration: underline;'>Kebijakan Privasi Unity</a>.",
+
+        s5Title: "5. Perlindungan Privasi Anak (COPPA)",
+        s5P1: "Game Tembak 2048 ramah untuk semua usia, termasuk keluarga dan anak-anak. Kami tidak pernah secara sadar mengumpulkan data pengenal pribadi apa pun dari anak-anak di bawah umur (di bawah 13 tahun) sesuai dengan undang-undang Children's Online Privacy Protection Act (COPPA).",
+
+        s6Title: "6. Keamanan Data & Hak Anda",
+        s6P1: "Karena semua data skor disimpan secara lokal di ponsel Anda, Anda memiliki kendali penuh 100%. Jika Anda ingin menghapus seluruh data skor dan riwayat permainan, Anda cukup melakukan <em>Clear Data (Hapus Data)</em> pada menu info aplikasi Tembak 2048 di pengaturan HP, atau menghapus instalasi (uninstall) game.",
+
+        s7Title: "7. Perubahan Kebijakan Privasi",
+        s7P1: "Kami dapat memperbarui dokumen Kebijakan Privasi ini dari waktu ke waktu jika terdapat pembaruan fitur pada aplikasi. Segala perubahan akan langsung diperbarui pada halaman ini beserta tanggal revisi terbaru.",
+
+        contactTitle: "Pertanyaan atau Masukan? Hubungi Kami!",
+        contactDesc: "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau game Tembak 2048, tim kami di <strong>Rona Pratama Citra Abadi</strong> siap membantu Anda.",
+        toastCopied: "Email berhasil disalin ke clipboard! 📋"
+      },
+      en: {
+        officialDoc: "Official Privacy Documentation",
+        heroTitle: "Privacy Policy for Tembak 2048",
+        heroSub: "Tembak 2048: 3D Chain Cube Puzzle",
+        metaOrg: "Rona Pratama Citra Abadi",
+        metaStatus: "100% Privacy & Family Friendly",
+        metaUpdated: "Last Updated: October 8, 2026",
+
+        s1Title: "1. Our Privacy Commitment",
+        s1P1: "Welcome to <strong>Tembak 2048</strong>! This game is developed and operated by <strong>Rona Pratama Citra Abadi</strong>. We respect your privacy and are committed to protecting your personal information while you enjoy our fun puzzle game.",
+        s1P2: "This Privacy Policy explains what data is processed (or not processed) when you download, install, and play Tembak 2048 on your Android device.",
+
+        s2Title: "2. Information Collection & Use",
+        s2P1: "<strong>We DO NOT collect any personally identifiable information (PII)</strong> such as your real name, phone number, address, financial details, or precise GPS location.",
+        s2List: `
+          <li><span class="check-emoji">✅</span> <strong>Scores & Game Progress:</strong> Saved locally on your device storage to keep your high scores and 2048 cube achievements intact.</li>
+          <li><span class="check-emoji">✅</span> <strong>User Preferences:</strong> Audio/sound toggle choices and language preferences (English/Indonesian) are stored directly on your phone.</li>
+          <li><span class="check-emoji">🚫</span> <strong>No Account Required:</strong> You can jump right into the game without registration or sign-up.</li>
+        `,
+
+        s3Title: "3. Device Permissions",
+        s3P1: "Tembak 2048 only requires basic Android system permissions necessary for gameplay:",
+        s3List: `
+          <li><span class="check-emoji">🔔</span> <strong>Notifications (POST_NOTIFICATIONS):</strong> Used to deliver optional local gameplay reminders and free rewards.</li>
+          <li><span class="check-emoji">⏰</span> <strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Used by local system schedulers for in-game timers and reminders.</li>
+          <li><span class="check-emoji">🌐</span> <strong>Network State (INTERNET & ACCESS_NETWORK_STATE):</strong> Used for fundamental game engine connectivity.</li>
+        `,
+        s3P2: "You may disable notification permissions at any time via your device's Application Settings without affecting your core puzzle experience.",
+
+        s4Title: "4. Third-Party Services & Engine",
+        s4P1: "This game is built with the <strong>Unity Technologies</strong> engine. Unity may process non-personal diagnostic device information (such as hardware model, OS version, screen resolution) strictly for 3D graphics rendering and runtime stability.",
+        s4P2: "To learn more about how Unity handles data, please review the <a href='https://unity.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer' style='color: var(--purple-main); font-weight: 700; text-decoration: underline;'>Unity Privacy Policy</a>.",
+
+        s5Title: "5. Children's Privacy (COPPA)",
+        s5P1: "Tembak 2048 is crafted for audiences of all ages, including families and children. We do not knowingly collect personal information from children under 13 years of age, complying fully with the Children's Online Privacy Protection Act (COPPA).",
+
+        s6Title: "6. Data Security & Your Rights",
+        s6P1: "Because game score data is stored locally on your device, you have complete ownership. If you wish to wipe your scores or game progress, you can clear app data in your Android settings or simply uninstall the application.",
+
+        s7Title: "7. Changes to This Policy",
+        s7P1: "We may update our Privacy Policy periodically to reflect new features. Any modifications will be posted directly on this page alongside the updated revision date.",
+
+        contactTitle: "Questions or Feedback? Contact Us!",
+        contactDesc: "If you have questions about this Privacy Policy or Tembak 2048, our team at <strong>Rona Pratama Citra Abadi</strong> is happy to assist you.",
+        toastCopied: "Email copied to clipboard! 📋"
+      }
+    };
+
+    let currentLang = 'id';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+
+      document.getElementById('txt-official-doc').textContent = t.officialDoc;
+      document.getElementById('txt-hero-title').textContent = t.heroTitle;
+      document.getElementById('txt-hero-sub').textContent = t.heroSub;
+      document.getElementById('txt-meta-org').textContent = t.metaOrg;
+      document.getElementById('txt-meta-status').textContent = t.metaStatus;
+      document.getElementById('txt-meta-updated').textContent = t.metaUpdated;
+
+      document.getElementById('s1-title').innerHTML = t.s1Title;
+      document.getElementById('s1-p1').innerHTML = t.s1P1;
+      document.getElementById('s1-p2').innerHTML = t.s1P2;
+
+      document.getElementById('s2-title').innerHTML = t.s2Title;
+      document.getElementById('s2-p1').innerHTML = t.s2P1;
+      document.getElementById('s2-list').innerHTML = t.s2List;
+
+      document.getElementById('s3-title').innerHTML = t.s3Title;
+      document.getElementById('s3-p1').innerHTML = t.s3P1;
+      document.getElementById('s3-list').innerHTML = t.s3List;
+      document.getElementById('s3-p2').innerHTML = t.s3P2;
+
+      document.getElementById('s4-title').innerHTML = t.s4Title;
+      document.getElementById('s4-p1').innerHTML = t.s4P1;
+      document.getElementById('s4-p2').innerHTML = t.s4P2;
+
+      document.getElementById('s5-title').innerHTML = t.s5Title;
+      document.getElementById('s5-p1').innerHTML = t.s5P1;
+
+      document.getElementById('s6-title').innerHTML = t.s6Title;
+      document.getElementById('s6-p1').innerHTML = t.s6P1;
+
+      document.getElementById('s7-title').innerHTML = t.s7Title;
+      document.getElementById('s7-p1').innerHTML = t.s7P1;
+
+      document.getElementById('txt-contact-title').textContent = t.contactTitle;
+      document.getElementById('txt-contact-desc').innerHTML = t.contactDesc;
+
+      document.getElementById('btn-lang-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-lang-id').classList.toggle('active', lang === 'id');
+      document.documentElement.lang = lang;
+    }
+
+    function copyEmail() {
+      const email = 'ronapratama95@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        showToast(translations[currentLang].toastCopied);
+      }).catch(() => {
+        showToast(email);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
