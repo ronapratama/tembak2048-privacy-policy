@@ -272,11 +272,17 @@
 
     .meta-pill.yellow {
       background: #FFF9DB;
+      color: #995A00;
     }
 
     .meta-pill.green {
       background: #E6FCF5;
       color: #0CA678;
+    }
+
+    .meta-pill.red {
+      background: #FFE3E3;
+      color: #C92A2A;
     }
 
     /* Content Cards */
@@ -321,6 +327,7 @@
     .icon-pink   { background: #FFE0E0; }
     .icon-blue   { background: #DDF3FF; }
     .icon-green  { background: #DBF9E8; }
+    .icon-red    { background: #FFE3E3; }
 
     .section-title {
       font-size: 21px;
@@ -346,6 +353,11 @@
       border-radius: 16px;
       padding: 14px 18px;
       margin: 14px 0;
+    }
+
+    .cartoon-highlight-box.alert-box {
+      background: #FFF5F5;
+      border-color: #FA5252;
     }
 
     .cartoon-highlight-box ul {
@@ -533,13 +545,13 @@
           <span>📦</span>
           <span>com.ronapratama.tembak2048</span>
         </div>
-        <div class="meta-pill green">
-          <span>🛡️</span>
-          <span id="txt-meta-status">100% Ramah Privasi & Keluarga</span>
+        <div class="meta-pill red">
+          <span>🔞</span>
+          <span id="txt-meta-age">Khusus Usia 13 Tahun ke Atas (13+)</span>
         </div>
-        <div class="meta-pill">
-          <span>📅</span>
-          <span id="txt-meta-updated">Terakhir Diperbarui: 8 Oktober 2026</span>
+        <div class="meta-pill green">
+          <span>🔒</span>
+          <span id="txt-meta-nodata">Zero Data: Tidak Menyimpan & Tidak Membagikan Data</span>
         </div>
       </div>
     </section>
@@ -554,85 +566,94 @@
           <h2 class="section-title" id="s1-title">1. Komitmen Privasi Kami</h2>
         </div>
         <p id="s1-p1">
-          Selamat datang di game <strong>Tembak 2048</strong>! Game ini dikembangkan dan dikelola oleh <strong>Rona Pratama Citra Abadi</strong>. Kami sangat menghargai privasi para pemain kami dan berkomitmen penuh untuk melindungi informasi Anda selama memainkan game santai ini.
+          Selamat datang di game <strong>Tembak 2048</strong>! Game ini dikembangkan dan dikelola oleh <strong>Rona Pratama Citra Abadi</strong>. Kami menghargai dan menjamin privasi Anda sepenuhnya saat memainkan game ini.
         </p>
+        <div class="cartoon-highlight-box alert-box">
+          <p id="s1-box-text" style="font-weight: 700; color: #C92A2A; margin: 0;">
+            ⚠️ <strong>PENEGASAN PENTING:</strong> Game ini ditujukan khusus untuk pengguna <strong>berusia 13 tahun ke atas</strong>. Kami <strong>TIDAK PERNAH MENYIMPAN</strong> dan <strong>TIDAK PERNAH MEMBAGIKAN</strong> data pribadi pengguna apa pun kepada pihak luar atau pihak ketiga mana pun.
+          </p>
+        </div>
         <p id="s1-p2">
-          Kebijakan Privasi ini menjelaskan jenis data apa yang diproses (atau tidak diproses) saat Anda mengunduh, memasang, dan memainkan Tembak 2048 di perangkat Android Anda.
+          Kebijakan Privasi ini menjelaskan prinsip perlindungan data saat Anda mengunduh, memasang, dan memainkan Tembak 2048 di perangkat Android Anda.
         </p>
       </article>
 
-      <!-- Section 2: Data Pribadi -->
+      <!-- Section 2: Zero Data Storage & Sharing -->
       <article class="policy-section">
         <div class="section-header">
-          <div class="section-icon icon-yellow">🎯</div>
-          <h2 class="section-title" id="s2-title">2. Pengumpulan dan Penggunaan Data</h2>
+          <div class="section-icon icon-yellow">🛡️</div>
+          <h2 class="section-title" id="s2-title">2. Kami Tidak Menyimpan & Tidak Membagikan Data Anda</h2>
         </div>
         <p id="s2-p1">
-          <strong>Kami TIDAK mengumpulkan informasi pribadi yang dapat mengidentifikasi Anda</strong> (seperti nama asli, nomor telepon, alamat rumah, informasi rekening bank, maupun data lokasi GPS).
+          <strong>Kebijakan kami sangat tegas: Kami TIDAK mengumpulkan, TIDAK menyimpan di server eksternal, dan TIDAK membagikan informasi pribadi atau data pengguna apa pun.</strong>
         </p>
         <div class="cartoon-highlight-box">
           <ul id="s2-list">
-            <li><span class="check-emoji">✅</span> <strong>Skor dan Level:</strong> Disimpan secara lokal di memori perangkat Anda (Local Storage) untuk menyimpan capaian rekor balok 2048.</li>
-            <li><span class="check-emoji">✅</span> <strong>Preferensi Pengguna:</strong> Pilihan suara/efek audio dan preferensi bahasa (Inggris/Indonesia) disimpan langsung di HP Anda.</li>
-            <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Pendaftaran:</strong> Anda dapat langsung memainkan game tanpa harus membuat akun atau login.</li>
+            <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Penyimpanan Server:</strong> Kami tidak memiliki server eksternal untuk melacak identitas, nama, email, nomor HP, kontak, maupun lokasi geografis Anda.</li>
+            <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Penjualan/Pembagian Data:</strong> Data Anda tidak pernah dan tidak akan pernah dijual, disewakan, atau dibagikan kepada pihak ketiga atau pengiklan mana pun.</li>
+            <li><span class="check-emoji">💾</span> <strong>Data Offline Lokal Saja:</strong> Capaian skor balok 2048 dan preferensi audio hanya tersimpan secara offline di penyimpanan lokal memori HP Anda sendiri.</li>
+            <li><span class="check-emoji">🚫</span> <strong>Tanpa Registrasi / Akun:</strong> Anda dapat langsung memainkan game tanpa memerlukan akun, kata sandi, ataupun login media sosial.</li>
           </ul>
         </div>
       </article>
 
-      <!-- Section 3: Izin Perangkat -->
+      <!-- Section 3: Batasan Usia 13+ Tahun -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-icon icon-red">🔞</div>
+          <h2 class="section-title" id="s3-title">3. Batasan Usia: Khusus Pengguna 13 Tahun ke Atas</h2>
+        </div>
+        <p id="s3-p1">
+          Game Tembak 2048 dirancang dan ditujukan secara eksklusif bagi pemain yang <strong>berusia 13 tahun ke atas (Teen 13+)</strong>. Game ini tidak ditujukan untuk anak-anak di bawah umur 13 tahun.
+        </p>
+        <p id="s3-p2">
+          Karena sistem kami berprinsip <em>Zero Data Collection</em>, kami tidak mengumpulkan informasi pengenal pribadi apa pun dari siapa pun, termasuk tidak mengumpulkan data apa pun dari anak-anak di bawah umur.
+        </p>
+      </article>
+
+      <!-- Section 4: Izin Perangkat -->
       <article class="policy-section">
         <div class="section-header">
           <div class="section-icon icon-teal">📱</div>
-          <h2 class="section-title" id="s3-title">3. Izin Akses Perangkat (Permissions)</h2>
+          <h2 class="section-title" id="s4-title">4. Izin Akses Perangkat (Permissions)</h2>
         </div>
-        <p id="s3-p1">
-          Aplikasi Tembak 2048 hanya memerlukan izin dasar standar Android untuk pengoperasian game yang lancar:
+        <p id="s4-p1">
+          Aplikasi Tembak 2048 hanya menggunakan izin internal standar Android untuk pengalaman bermain di perangkat lokal Anda:
         </p>
         <div class="cartoon-highlight-box">
-          <ul id="s3-list">
-            <li><span class="check-emoji">🔔</span> <strong>Notifikasi (POST_NOTIFICATIONS):</strong> Digunakan untuk memberikan pengingat bermain atau informasi hadiah harian santai secara lokal.</li>
-            <li><span class="check-emoji">⏰</span> <strong>Alarm / Pengingat (SCHEDULE_EXACT_ALARM):</strong> Digunakan oleh sistem penjadwalan lokal game untuk fitur pengingat di perangkat Anda.</li>
-            <li><span class="check-emoji">🌐</span> <strong>Konektivitas Jaringan Dasar (INTERNET & ACCESS_NETWORK_STATE):</strong> Digunakan untuk koneksi dasar engine game.</li>
+          <ul id="s4-list">
+            <li><span class="check-emoji">🔔</span> <strong>Notifikasi (POST_NOTIFICATIONS):</strong> Hanya untuk pemberitahuan lokal pengingat santai bermain di HP Anda sendiri (tanpa mengirim data keluar).</li>
+            <li><span class="check-emoji">⏰</span> <strong>Penjadwalan Alarm (SCHEDULE_EXACT_ALARM):</strong> Digunakan untuk pengingat waktu lokal di sistem HP Anda.</li>
+            <li><span class="check-emoji">🌐</span> <strong>Konektivitas Dasar (INTERNET & ACCESS_NETWORK_STATE):</strong> Diperlukan untuk komunikasi modul engine Unity standar.</li>
           </ul>
         </div>
-        <p id="s3-p2">
-          Anda dapat menonaktifkan izin notifikasi kapan saja melalui menu Pengaturan Aplikasi di ponsel Anda tanpa mengurangi keseruan bermain game.
+        <p id="s4-p2">
+          Anda dapat menonaktifkan izin notifikasi kapan saja melalui menu Pengaturan Aplikasi di ponsel Anda tanpa mengganggu jalannya permainan game.
         </p>
       </article>
 
-      <!-- Section 4: Layanan Pihak Ketiga -->
+      <!-- Section 5: Engine Unity & Non-Personal Data -->
       <article class="policy-section">
         <div class="section-header">
           <div class="section-icon icon-pink">🧩</div>
-          <h2 class="section-title" id="s4-title">4. Layanan Pihak Ketiga & Engine</h2>
-        </div>
-        <p id="s4-p1">
-          Game ini dibangun menggunakan framework <strong>Unity Technologies</strong>. Unity dapat memproses data teknis non-pribadi perangkat standar (seperti model ponsel, versi OS, resolusi layar) semata-mata untuk tujuan optimalisasi grafis 3D dan stabilitas performa game.
-        </p>
-        <p id="s4-p2">
-          Untuk mempelajari kebijakan penanganan data Unity, Anda dapat mengunjungi <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: var(--purple-main); font-weight: 700; text-decoration: underline;">Kebijakan Privasi Unity</a>.
-        </p>
-      </article>
-
-      <!-- Section 5: Privasi Anak-Anak -->
-      <article class="policy-section">
-        <div class="section-header">
-          <div class="section-icon icon-blue">🧸</div>
-          <h2 class="section-title" id="s5-title">5. Perlindungan Privasi Anak (COPPA)</h2>
+          <h2 class="section-title" id="s5-title">5. Framework Engine Game (Unity Technologies)</h2>
         </div>
         <p id="s5-p1">
-          Game Tembak 2048 ramah untuk semua usia, termasuk keluarga dan anak-anak. Kami tidak pernah secara sadar mengumpulkan data pengenal pribadi apa pun dari anak-anak di bawah umur (di bawah 13 tahun) sesuai dengan undang-undang Children's Online Privacy Protection Act (COPPA).
+          Aplikasi ini dibangun menggunakan framework <strong>Unity Technologies</strong>. Unity hanya membaca parameter teknis perangkat dasar (seperti resolusi layar grafis dan tipe GPU) untuk keperluan rendering balok 3D secara lancar pada perangkat Anda. Tidak ada data pribadi pengguna yang disimpan atau dieksploitasi.
+        </p>
+        <p id="s5-p2">
+          Kebijakan penanganan data engine Unity dapat dilihat pada tautan resmi: <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" style="color: var(--purple-main); font-weight: 700; text-decoration: underline;">Unity Privacy Policy</a>.
         </p>
       </article>
 
-      <!-- Section 6: Keamanan Data & Hak Pengguna -->
+      <!-- Section 6: Kendali Penuh Pengguna -->
       <article class="policy-section">
         <div class="section-header">
           <div class="section-icon icon-green">🔐</div>
-          <h2 class="section-title" id="s6-title">6. Keamanan Data & Hak Anda</h2>
+          <h2 class="section-title" id="s6-title">6. Kendali Penuh & Penghapusan Data</h2>
         </div>
         <p id="s6-p1">
-          Karena semua data skor disimpan secara lokal di ponsel Anda, Anda memiliki kendali penuh 100%. Jika Anda ingin menghapus seluruh data skor dan riwayat permainan, Anda cukup melakukan <em>Clear Data (Hapus Data)</em> pada menu info aplikasi Tembak 2048 di pengaturan HP, atau menghapus instalasi (uninstall) game.
+          Karena semua skor hanya tersimpan di memori lokal HP Anda, Anda memegang kendali 100%. Untuk menghapus semua skor dan preferensi game, Anda cukup memilih menu <em>Hapus Data / Clear Storage</em> pada menu Pengaturan Aplikasi ponsel, atau menghapus pemasangan (uninstall) aplikasi dari perangkat Anda.
         </p>
       </article>
 
@@ -643,7 +664,7 @@
           <h2 class="section-title" id="s7-title">7. Perubahan Kebijakan Privasi</h2>
         </div>
         <p id="s7-p1">
-          Kami dapat memperbarui dokumen Kebijakan Privasi ini dari waktu ke waktu jika terdapat pembaruan fitur pada aplikasi. Segala perubahan akan langsung diperbarui pada halaman ini beserta tanggal revisi terbaru.
+          Apabila terdapat pembaruan teknis di masa mendatang, dokumen ini akan diperbarui secara langsung pada halaman resmi ini. Kami tetap berpegang teguh pada komitmen bahwa kami tidak akan pernah menyimpan atau membagikan data pribadi pemain kami.
         </p>
       </article>
 
@@ -680,42 +701,45 @@
         heroTitle: "Kebijakan Privasi Tembak 2048",
         heroSub: "Tembak 2048: 3D Chain Cube Puzzle",
         metaOrg: "Rona Pratama Citra Abadi",
-        metaStatus: "100% Ramah Privasi & Keluarga",
-        metaUpdated: "Terakhir Diperbarui: 8 Oktober 2026",
+        metaAge: "Khusus Usia 13 Tahun ke Atas (13+)",
+        metaNoData: "Zero Data: Tidak Menyimpan & Tidak Membagikan Data",
 
         s1Title: "1. Komitmen Privasi Kami",
-        s1P1: "Selamat datang di game <strong>Tembak 2048</strong>! Game ini dikembangkan dan dikelola oleh <strong>Rona Pratama Citra Abadi</strong>. Kami sangat menghargai privasi para pemain kami dan berkomitmen penuh untuk melindungi informasi Anda selama memainkan game santai ini.",
-        s1P2: "Kebijakan Privasi ini menjelaskan jenis data apa yang diproses (atau tidak diproses) saat Anda mengunduh, memasang, dan memainkan Tembak 2048 di perangkat Android Anda.",
+        s1P1: "Selamat datang di game <strong>Tembak 2048</strong>! Game ini dikembangkan dan dikelola oleh <strong>Rona Pratama Citra Abadi</strong>. Kami menghargai dan menjamin privasi Anda sepenuhnya saat memainkan game ini.",
+        s1BoxText: "⚠️ <strong>PENEGASAN PENTING:</strong> Game ini ditujukan khusus untuk pengguna <strong>berusia 13 tahun ke atas</strong>. Kami <strong>TIDAK PERNAH MENYIMPAN</strong> dan <strong>TIDAK PERNAH MEMBAGIKAN</strong> data pribadi pengguna apa pun kepada pihak luar atau pihak ketiga mana pun.",
+        s1P2: "Kebijakan Privasi ini menjelaskan prinsip perlindungan data saat Anda mengunduh, memasang, dan memainkan Tembak 2048 di perangkat Android Anda.",
 
-        s2Title: "2. Pengumpulan dan Penggunaan Data",
-        s2P1: "<strong>Kami TIDAK mengumpulkan informasi pribadi yang dapat mengidentifikasi Anda</strong> (seperti nama asli, nomor telepon, alamat rumah, informasi rekening bank, maupun data lokasi GPS).",
+        s2Title: "2. Kami Tidak Menyimpan & Tidak Membagikan Data Anda",
+        s2P1: "<strong>Kebijakan kami sangat tegas: Kami TIDAK mengumpulkan, TIDAK menyimpan di server eksternal, dan TIDAK membagikan informasi pribadi atau data pengguna apa pun.</strong>",
         s2List: `
-          <li><span class="check-emoji">✅</span> <strong>Skor dan Level:</strong> Disimpan secara lokal di memori perangkat Anda (Local Storage) untuk menyimpan capaian rekor balok 2048.</li>
-          <li><span class="check-emoji">✅</span> <strong>Preferensi Pengguna:</strong> Pilihan suara/efek audio dan preferensi bahasa (Inggris/Indonesia) disimpan langsung di HP Anda.</li>
-          <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Pendaftaran:</strong> Anda dapat langsung memainkan game tanpa harus membuat akun atau login.</li>
+          <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Penyimpanan Server:</strong> Kami tidak memiliki server eksternal untuk melacak identitas, nama, email, nomor HP, kontak, maupun lokasi geografis Anda.</li>
+          <li><span class="check-emoji">🚫</span> <strong>Tidak Ada Penjualan/Pembagian Data:</strong> Data Anda tidak pernah dan tidak akan pernah dijual, disewakan, atau dibagikan kepada pihak ketiga atau pengiklan mana pun.</li>
+          <li><span class="check-emoji">💾</span> <strong>Data Offline Lokal Saja:</strong> Capaian skor balok 2048 dan preferensi audio hanya tersimpan secara offline di penyimpanan lokal memori HP Anda sendiri.</li>
+          <li><span class="check-emoji">🚫</span> <strong>Tanpa Registrasi / Akun:</strong> Anda dapat langsung memainkan game tanpa memerlukan akun, kata sandi, ataupun login media sosial.</li>
         `,
 
-        s3Title: "3. Izin Akses Perangkat (Permissions)",
-        s3P1: "Aplikasi Tembak 2048 hanya memerlukan izin dasar standar Android untuk pengoperasian game yang lancar:",
-        s3List: `
-          <li><span class="check-emoji">🔔</span> <strong>Notifikasi (POST_NOTIFICATIONS):</strong> Digunakan untuk memberikan pengingat bermain atau informasi hadiah harian santai secara lokal.</li>
-          <li><span class="check-emoji">⏰</span> <strong>Alarm / Pengingat (SCHEDULE_EXACT_ALARM):</strong> Digunakan oleh sistem penjadwalan lokal game untuk fitur pengingat di perangkat Anda.</li>
-          <li><span class="check-emoji">🌐</span> <strong>Konektivitas Jaringan Dasar (INTERNET & ACCESS_NETWORK_STATE):</strong> Digunakan untuk koneksi dasar engine game.</li>
+        s3Title: "3. Batasan Usia: Khusus Pengguna 13 Tahun ke Atas",
+        s3P1: "Game Tembak 2048 dirancang dan ditujukan secara eksklusif bagi pemain yang <strong>berusia 13 tahun ke atas (Teen 13+)</strong>. Game ini tidak ditujukan untuk anak-anak di bawah umur 13 tahun.",
+        s3P2: "Karena sistem kami berprinsip <em>Zero Data Collection</em>, kami tidak mengumpulkan informasi pengenal pribadi apa pun dari siapa pun, termasuk tidak mengumpulkan data apa pun dari anak-anak di bawah umur.",
+
+        s4Title: "4. Izin Akses Perangkat (Permissions)",
+        s4P1: "Aplikasi Tembak 2048 hanya menggunakan izin internal standar Android untuk pengalaman bermain di perangkat lokal Anda:",
+        s4List: `
+          <li><span class="check-emoji">🔔</span> <strong>Notifikasi (POST_NOTIFICATIONS):</strong> Hanya untuk pemberitahuan lokal pengingat santai bermain di HP Anda sendiri (tanpa mengirim data keluar).</li>
+          <li><span class="check-emoji">⏰</span> <strong>Penjadwalan Alarm (SCHEDULE_EXACT_ALARM):</strong> Digunakan untuk pengingat waktu lokal di sistem HP Anda.</li>
+          <li><span class="check-emoji">🌐</span> <strong>Konektivitas Dasar (INTERNET & ACCESS_NETWORK_STATE):</strong> Diperlukan untuk komunikasi modul engine Unity standar.</li>
         `,
-        s3P2: "Anda dapat menonaktifkan izin notifikasi kapan saja melalui menu Pengaturan Aplikasi di ponsel Anda tanpa mengurangi keseruan bermain game.",
+        s4P2: "Anda dapat menonaktifkan izin notifikasi kapan saja melalui menu Pengaturan Aplikasi di ponsel Anda tanpa mengganggu jalannya permainan game.",
 
-        s4Title: "4. Layanan Pihak Ketiga & Engine",
-        s4P1: "Game ini dibangun menggunakan framework <strong>Unity Technologies</strong>. Unity dapat memproses data teknis non-pribadi perangkat standar (seperti model ponsel, versi OS, resolusi layar) semata-mata untuk tujuan optimalisasi grafis 3D dan stabilitas performa game.",
-        s4P2: "Untuk mempelajari kebijakan penanganan data Unity, Anda dapat mengunjungi <a href='https://unity.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer' style='color: var(--purple-main); font-weight: 700; text-decoration: underline;'>Kebijakan Privasi Unity</a>.",
+        s5Title: "5. Framework Engine Game (Unity Technologies)",
+        s5P1: "Aplikasi ini dibangun menggunakan framework <strong>Unity Technologies</strong>. Unity hanya membaca parameter teknis perangkat dasar (seperti resolusi layar grafis dan tipe GPU) untuk keperluan rendering balok 3D secara lancar pada perangkat Anda. Tidak ada data pribadi pengguna yang disimpan atau dieksploitasi.",
+        s5P2: "Kebijakan penanganan data engine Unity dapat dilihat pada tautan resmi: <a href='https://unity.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer' style='color: var(--purple-main); font-weight: 700; text-decoration: underline;'>Unity Privacy Policy</a>.",
 
-        s5Title: "5. Perlindungan Privasi Anak (COPPA)",
-        s5P1: "Game Tembak 2048 ramah untuk semua usia, termasuk keluarga dan anak-anak. Kami tidak pernah secara sadar mengumpulkan data pengenal pribadi apa pun dari anak-anak di bawah umur (di bawah 13 tahun) sesuai dengan undang-undang Children's Online Privacy Protection Act (COPPA).",
-
-        s6Title: "6. Keamanan Data & Hak Anda",
-        s6P1: "Karena semua data skor disimpan secara lokal di ponsel Anda, Anda memiliki kendali penuh 100%. Jika Anda ingin menghapus seluruh data skor dan riwayat permainan, Anda cukup melakukan <em>Clear Data (Hapus Data)</em> pada menu info aplikasi Tembak 2048 di pengaturan HP, atau menghapus instalasi (uninstall) game.",
+        s6Title: "6. Kendali Penuh & Penghapusan Data",
+        s6P1: "Karena semua skor hanya tersimpan di memori lokal HP Anda, Anda memegang kendali 100%. Untuk menghapus semua skor dan preferensi game, Anda cukup memilih menu <em>Hapus Data / Clear Storage</em> pada menu Pengaturan Aplikasi ponsel, atau menghapus pemasangan (uninstall) aplikasi dari perangkat Anda.",
 
         s7Title: "7. Perubahan Kebijakan Privasi",
-        s7P1: "Kami dapat memperbarui dokumen Kebijakan Privasi ini dari waktu ke waktu jika terdapat pembaruan fitur pada aplikasi. Segala perubahan akan langsung diperbarui pada halaman ini beserta tanggal revisi terbaru.",
+        s7P1: "Apabila terdapat pembaruan teknis di masa mendatang, dokumen ini akan diperbarui secara langsung pada halaman resmi ini. Kami tetap berpegang teguh pada komitmen bahwa kami tidak akan pernah menyimpan atau membagikan data pribadi pemain kami.",
 
         contactTitle: "Pertanyaan atau Masukan? Hubungi Kami!",
         contactDesc: "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau game Tembak 2048, tim kami di <strong>Rona Pratama Citra Abadi</strong> siap membantu Anda.",
@@ -726,42 +750,45 @@
         heroTitle: "Privacy Policy for Tembak 2048",
         heroSub: "Tembak 2048: 3D Chain Cube Puzzle",
         metaOrg: "Rona Pratama Citra Abadi",
-        metaStatus: "100% Privacy & Family Friendly",
-        metaUpdated: "Last Updated: October 8, 2026",
+        metaAge: "Designed Exclusively for Ages 13+ (Teen)",
+        metaNoData: "Zero Data: We Do Not Store or Share Any Data",
 
         s1Title: "1. Our Privacy Commitment",
-        s1P1: "Welcome to <strong>Tembak 2048</strong>! This game is developed and operated by <strong>Rona Pratama Citra Abadi</strong>. We respect your privacy and are committed to protecting your personal information while you enjoy our fun puzzle game.",
-        s1P2: "This Privacy Policy explains what data is processed (or not processed) when you download, install, and play Tembak 2048 on your Android device.",
+        s1P1: "Welcome to <strong>Tembak 2048</strong>! This game is developed and operated by <strong>Rona Pratama Citra Abadi</strong>. We respect and safeguard your privacy completely while you enjoy our fun puzzle game.",
+        s1BoxText: "⚠️ <strong>KEY HIGHLIGHT:</strong> This game is intended strictly for users <strong>aged 13 and older</strong>. We <strong>DO NOT STORE</strong> and <strong>DO NOT SHARE</strong> any user personal data with external parties or third parties whatsoever.",
+        s1P2: "This Privacy Policy explains our zero-data protection principles when you download, install, and play Tembak 2048 on your Android device.",
 
-        s2Title: "2. Information Collection & Use",
-        s2P1: "<strong>We DO NOT collect any personally identifiable information (PII)</strong> such as your real name, phone number, address, financial details, or precise GPS location.",
+        s2Title: "2. We Do Not Store & Do Not Share Any Data",
+        s2P1: "<strong>Our policy is strict and simple: We DO NOT collect, DO NOT store on remote servers, and DO NOT share any personally identifiable information (PII) or user data.</strong>",
         s2List: `
-          <li><span class="check-emoji">✅</span> <strong>Scores & Game Progress:</strong> Saved locally on your device storage to keep your high scores and 2048 cube achievements intact.</li>
-          <li><span class="check-emoji">✅</span> <strong>User Preferences:</strong> Audio/sound toggle choices and language preferences (English/Indonesian) are stored directly on your phone.</li>
-          <li><span class="check-emoji">🚫</span> <strong>No Account Required:</strong> You can jump right into the game without registration or sign-up.</li>
+          <li><span class="check-emoji">🚫</span> <strong>No External Server Storage:</strong> We do not operate remote servers to harvest or track your identity, name, email, phone number, contacts, or GPS location.</li>
+          <li><span class="check-emoji">🚫</span> <strong>No Selling or Sharing:</strong> Your data is never sold, leased, or shared with any third party, broker, or ad network.</li>
+          <li><span class="check-emoji">💾</span> <strong>Offline Local Gameplay:</strong> Game scores, block progress, and audio toggles are saved exclusively offline on your device's local storage.</li>
+          <li><span class="check-emoji">🚫</span> <strong>No Registration / Account:</strong> You can jump right into the game without requiring an account, password, or social media login.</li>
         `,
 
-        s3Title: "3. Device Permissions",
-        s3P1: "Tembak 2048 only requires basic Android system permissions necessary for gameplay:",
-        s3List: `
-          <li><span class="check-emoji">🔔</span> <strong>Notifications (POST_NOTIFICATIONS):</strong> Used to deliver optional local gameplay reminders and free rewards.</li>
-          <li><span class="check-emoji">⏰</span> <strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Used by local system schedulers for in-game timers and reminders.</li>
-          <li><span class="check-emoji">🌐</span> <strong>Network State (INTERNET & ACCESS_NETWORK_STATE):</strong> Used for fundamental game engine connectivity.</li>
+        s3Title: "3. Age Restriction: Exclusively for Ages 13 and Older",
+        s3P1: "Tembak 2048 is designed and intended exclusively for players <strong>aged 13 and older (Ages 13+)</strong>. The game is not targeted at children under the age of 13.",
+        s3P2: "Because our game operates on a strict <em>Zero Data Collection</em> architecture, we do not collect any personal identifying information from any user, including children under 13.",
+
+        s4Title: "4. Device Permissions",
+        s4P1: "Tembak 2048 only requests standard local Android system permissions necessary for device-level gameplay:",
+        s4List: `
+          <li><span class="check-emoji">🔔</span> <strong>Notifications (POST_NOTIFICATIONS):</strong> Used solely to trigger local on-device gameplay reminders (no data transmitted outward).</li>
+          <li><span class="check-emoji">⏰</span> <strong>Exact Alarms (SCHEDULE_EXACT_ALARM):</strong> Used by local timers on your own smartphone.</li>
+          <li><span class="check-emoji">🌐</span> <strong>Basic Network State (INTERNET & ACCESS_NETWORK_STATE):</strong> Utilized for standard Unity runtime engine communications.</li>
         `,
-        s3P2: "You may disable notification permissions at any time via your device's Application Settings without affecting your core puzzle experience.",
+        s4P2: "You can turn off notification permissions at any time via your device's Application Settings without impacting any game feature.",
 
-        s4Title: "4. Third-Party Services & Engine",
-        s4P1: "This game is built with the <strong>Unity Technologies</strong> engine. Unity may process non-personal diagnostic device information (such as hardware model, OS version, screen resolution) strictly for 3D graphics rendering and runtime stability.",
-        s4P2: "To learn more about how Unity handles data, please review the <a href='https://unity.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer' style='color: var(--purple-main); font-weight: 700; text-decoration: underline;'>Unity Privacy Policy</a>.",
+        s5Title: "5. Game Engine Framework (Unity Technologies)",
+        s5P1: "This game is built on <strong>Unity Technologies</strong>. Unity reads basic hardware specifications (such as display resolution and GPU model) strictly to render smooth 3D cubes on your phone. No personal data is stored or exploited.",
+        s5P2: "For more details on Unity runtime handling, visit the official: <a href='https://unity.com/legal/privacy-policy' target='_blank' rel='noopener noreferrer' style='color: var(--purple-main); font-weight: 700; text-decoration: underline;'>Unity Privacy Policy</a>.",
 
-        s5Title: "5. Children's Privacy (COPPA)",
-        s5P1: "Tembak 2048 is crafted for audiences of all ages, including families and children. We do not knowingly collect personal information from children under 13 years of age, complying fully with the Children's Online Privacy Protection Act (COPPA).",
-
-        s6Title: "6. Data Security & Your Rights",
-        s6P1: "Because game score data is stored locally on your device, you have complete ownership. If you wish to wipe your scores or game progress, you can clear app data in your Android settings or simply uninstall the application.",
+        s6Title: "6. Full User Control & Data Deletion",
+        s6P1: "Because all score data lives exclusively in your device local memory, you have 100% control. To wipe your game history, simply perform <em>Clear Data / Clear Storage</em> in your phone's App Settings, or uninstall the app from your device.",
 
         s7Title: "7. Changes to This Policy",
-        s7P1: "We may update our Privacy Policy periodically to reflect new features. Any modifications will be posted directly on this page alongside the updated revision date.",
+        s7P1: "Should technical updates occur in the future, this policy will be refreshed directly on this official page. Our commitment remains firm: we do not store or share our players' personal data.",
 
         contactTitle: "Questions or Feedback? Contact Us!",
         contactDesc: "If you have questions about this Privacy Policy or Tembak 2048, our team at <strong>Rona Pratama Citra Abadi</strong> is happy to assist you.",
@@ -779,11 +806,12 @@
       document.getElementById('txt-hero-title').textContent = t.heroTitle;
       document.getElementById('txt-hero-sub').textContent = t.heroSub;
       document.getElementById('txt-meta-org').textContent = t.metaOrg;
-      document.getElementById('txt-meta-status').textContent = t.metaStatus;
-      document.getElementById('txt-meta-updated').textContent = t.metaUpdated;
+      document.getElementById('txt-meta-age').textContent = t.metaAge;
+      document.getElementById('txt-meta-nodata').textContent = t.metaNoData;
 
       document.getElementById('s1-title').innerHTML = t.s1Title;
       document.getElementById('s1-p1').innerHTML = t.s1P1;
+      document.getElementById('s1-box-text').innerHTML = t.s1BoxText;
       document.getElementById('s1-p2').innerHTML = t.s1P2;
 
       document.getElementById('s2-title').innerHTML = t.s2Title;
@@ -792,15 +820,16 @@
 
       document.getElementById('s3-title').innerHTML = t.s3Title;
       document.getElementById('s3-p1').innerHTML = t.s3P1;
-      document.getElementById('s3-list').innerHTML = t.s3List;
       document.getElementById('s3-p2').innerHTML = t.s3P2;
 
       document.getElementById('s4-title').innerHTML = t.s4Title;
       document.getElementById('s4-p1').innerHTML = t.s4P1;
+      document.getElementById('s4-list').innerHTML = t.s4List;
       document.getElementById('s4-p2').innerHTML = t.s4P2;
 
       document.getElementById('s5-title').innerHTML = t.s5Title;
       document.getElementById('s5-p1').innerHTML = t.s5P1;
+      document.getElementById('s5-p2').innerHTML = t.s5P2;
 
       document.getElementById('s6-title').innerHTML = t.s6Title;
       document.getElementById('s6-p1').innerHTML = t.s6P1;
